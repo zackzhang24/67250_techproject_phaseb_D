@@ -30,11 +30,6 @@ nav a:hover {
     border-color: #4d5c3b;
 }
 
-/* Active page highlight */
-#navselected {
-    color: #92ad70;
-}
-
 /* Footer */
 footer {
     border-top: 1px solid rgba(245,245,247,.12);
@@ -58,4 +53,41 @@ tr:nth-child(even) {
 form * {
     margin: auto;
     text-align: center;
+}
+
+/* Grid Layout */
+.container {
+    display: grid;
+    grid-template-areas:
+        'header header'
+        'nav_bar nav_bar'
+        'main main-img'
+        'footer footer';
+}
+
+.header {
+    grid-area: header;
+}
+
+.nav_bar {
+    grid-area: nav_bar;
+    display: flex;
+    justify-content: right;
+}
+
+.main {
+    grid-area: main;
+}
+
+.main_img {
+    grid-area: main-img;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+/* Active nav */
+.active {
+    color: #92ad70;
 }
