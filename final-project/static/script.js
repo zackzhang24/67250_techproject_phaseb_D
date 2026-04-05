@@ -76,12 +76,19 @@ if (document.querySelector('.slideshow-container')) {
 // ===== Ticket Price Calculation =====
 function updatePrice() {
     var quantity = document.getElementById('ticketQuantity');
+    var type = document.getElementById('ticketType');
     var priceDisplay = document.getElementById('priceDisplay');
-    if (!quantity || !priceDisplay) return;
+    if (!quantity || !priceDisplay || !type) return;
+
     var qty = parseInt(quantity.value) || 0;
     if (qty < 1) qty = 0;
     if (qty > 10) qty = 10;
-    var price = qty * 18;
+
+    var unitPrice = 18;
+    if (type.value === 'student') unitPrice = 10;
+    if (type.value === 'member') unitPrice = 0;
+
+    var price = qty * unitPrice;
     priceDisplay.innerHTML = "Total: $" + price.toFixed(2);
 }
 

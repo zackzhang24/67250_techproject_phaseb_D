@@ -65,7 +65,7 @@
                 <p class="error-msg" id="dateError"></p>
 
                 <label for="ticketType">Ticket Type <span style="color:red;">*</span></label>
-                <select id="ticketType">
+                <select id="ticketType" onchange="updatePrice()">
                     <option value="">-- Select --</option>
                     <option value="general">General ($18)</option>
                     <option value="student">Student ($10)</option>
