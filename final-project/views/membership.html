@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Zack Zhang">
+    <meta name="keywords" content="Tennis, Rackets, Museum, Membership, Donation">
+    <meta name="description" content="ACE Museum - Membership and donation options">
+    <title>ACE Museum - Membership</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+    <div class="container">
+        <header class="header">
+            <img id="logo" src="../static/acelogo.png" alt="ACE Museum Logo">
+        </header>
+        <nav class="nav_bar">
+            <a href="javascript:void(0);" class="hamburger" onclick="toggleNav()">&#9776;</a>
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="tickets.html" class="cta-nav">Buy Tickets</a>
+            <a href="membership.html">Membership</a>
+        </nav>
+        <main class="main">
+
+            <h2>Become a Member</h2>
+            <p>
+                Support ACE Museum and enjoy exclusive benefits year-round. Members receive free
+                admission, early access to new exhibitions, discounts at the museum shop, and
+                invitations to members-only events. Choose the tier that works best for you.
+            </p>
+
+            <!-- Membership Tiers -->
+            <div class="tier-grid">
+                <div class="tier-card">
+                    <h3>Individual</h3>
+                    <p class="tier-price">$50/yr</p>
+                    <ul>
+                        <li>Free general admission for one</li>
+                        <li>10% museum shop discount</li>
+                        <li>Monthly newsletter</li>
+                        <li>Early exhibition access</li>
+                    </ul>
+                    <a href="tickets.html" class="cta-button">Join Now</a>
+                </div>
+                <div class="tier-card featured">
+                    <h3>Family</h3>
+                    <p class="tier-price">$90/yr</p>
+                    <ul>
+                        <li>Free admission for up to 4 people</li>
+                        <li>15% museum shop discount</li>
+                        <li>Monthly newsletter</li>
+                        <li>Early exhibition access</li>
+                        <li>Free kids workshop entry</li>
+                    </ul>
+                    <a href="tickets.html" class="cta-button">Join Now</a>
+                </div>
+                <div class="tier-card">
+                    <h3>Patron</h3>
+                    <p class="tier-price">$200/yr</p>
+                    <ul>
+                        <li>Free admission for up to 6 people</li>
+                        <li>20% museum shop discount</li>
+                        <li>Private exhibition tours</li>
+                        <li>Invitation to annual gala</li>
+                        <li>Name on donor wall</li>
+                    </ul>
+                    <a href="tickets.html" class="cta-button">Join Now</a>
+                </div>
+            </div>
+
+            <!-- Donations -->
+            <h2>Make a Donation</h2>
+            <p>
+                Not ready for a membership? You can still support ACE Museum with a one-time donation.
+                Every contribution helps us preserve tennis history, develop new exhibitions, and keep
+                our educational programs running. All donations are tax-deductible.
+            </p>
+            <table>
+                <tr>
+                    <th>Donation Level</th>
+                    <th>Amount</th>
+                    <th>Recognition</th>
+                </tr>
+                <tr>
+                    <td>Friend</td>
+                    <td>$25</td>
+                    <td>Thank-you email</td>
+                </tr>
+                <tr>
+                    <td>Supporter</td>
+                    <td>$100</td>
+                    <td>Name in annual report</td>
+                </tr>
+                <tr>
+                    <td>Champion</td>
+                    <td>$500</td>
+                    <td>Name on donor wall + private tour</td>
+                </tr>
+                <tr>
+                    <td>Legend</td>
+                    <td>$1,000+</td>
+                    <td>All Champion benefits + annual gala invite</td>
+                </tr>
+            </table>
+
+            <p>To make a donation, please contact us at <a href="mailto:donate@acemuseum.org">donate@acemuseum.org</a> or call (412) 555-0100.</p>
+
+        </main>
+        <footer class="footer">
+            <p id="copyYear"></p>
+            <p>5000 Forbes Ave, Pittsburgh, PA 15213 | info@acemuseum.org</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Zack Zhang">
+    <meta name="keywords" content="Tennis, Rackets, Museum, Exhibitions">
+    <meta name="description" content="ACE Museum - Current exhibitions on display">
+    <title>ACE Museum - Exhibitions</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+    <div class="container">
+        <header class="header">
+            <img id="logo" src="../static/acelogo.png" alt="ACE Museum Logo">
+        </header>
+        <nav class="nav_bar">
+            <a href="javascript:void(0);" class="hamburger" onclick="toggleNav()">&#9776;</a>
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="tickets.html" class="cta-nav">Buy Tickets</a>
+            <a href="membership.html">Membership</a>
+        </nav>
+        <main class="main">
+
+            <h2>Current Exhibitions</h2>
+            <p>Explore our rotating collection of exhibitions that celebrate the history, technology, and culture of tennis rackets.</p>
+
+            <h3>Exhibition 1: The Wooden Era (1880s–1970s)</h3>
+            <img src="../static/images/wooden-rackets.jpg" alt="Collection of vintage wooden tennis rackets" width="500">
+            <p>
+                Step back in time and discover the handcrafted wooden rackets that defined the early
+                decades of tennis. From the first laminated ash frames to the iconic Dunlop Maxply,
+                this exhibition traces how materials, weight, and head size evolved before the modern era.
+                Highlights include rackets used in early Wimbledon championships and rare frames from
+                manufacturers that no longer exist.
+            </p>
+
+            <h3>Exhibition 2: Grand Slam Frames</h3>
+            <img src="../static/images/grandslam-rackets.jpg" alt="Famous tennis rackets used in Grand Slam finals" width="500">
+            <p>
+                See the actual rackets swung by the greatest players in tennis history. This exhibition
+                features match-used frames from Roger Federer, Rafael Nadal, Serena Williams, Billie Jean King,
+                and Pete Sampras. Each racket is displayed alongside match footage and stats from the
+                tournament where it was used. Learn how each player's racket choice reflected their
+                playing style and strategy.
+            </p>
+
+            <h3>Exhibition 3: The Science of Spin</h3>
+            <img src="../static/images/science-spin.jpg" alt="Interactive display showing how racket strings affect ball spin" width="500">
+            <p>
+                How does string pattern affect topspin? What role does frame stiffness play in power?
+                This interactive exhibition lets visitors experiment with different racket setups on
+                a simulated court. Touch screens display real-time data on spin rate, ball speed, and
+                launch angle. It is our most hands-on exhibit and a favorite among competitive players
+                and curious visitors alike.
+            </p>
+
+            <h3>Exhibition 4: Rackets Around the World</h3>
+            <img src="../static/images/world-rackets.jpg" alt="Tennis rackets from different countries and cultures" width="500">
+            <p>
+                Tennis is played in over 200 countries, and racket design varies by region, playing
+                surface, and local manufacturing traditions. This exhibition showcases rackets from
+                Japan, France, Australia, Argentina, and beyond, highlighting how geography and culture
+                influence equipment design. From the clay courts of Roland Garros to the hard courts
+                of Melbourne, see how the game adapts around the world.
+            </p>
+
+            <h2>Upcoming Exhibitions</h2>
+            <table>
+                <tr>
+                    <th>Exhibition</th>
+                    <th>Opening Date</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>String Theory</td>
+                    <td>June 2026</td>
+                    <td>A deep dive into natural gut, synthetic, and polyester strings</td>
+                </tr>
+                <tr>
+                    <td>The Grip</td>
+                    <td>September 2026</td>
+                    <td>How overgrips, handle shapes, and grip size affect performance</td>
+                </tr>
+                <tr>
+                    <td>Rackets of the Future</td>
+                    <td>January 2027</td>
+                    <td>Prototype frames using graphene, AI-optimized designs, and smart sensors</td>
+                </tr>
+            </table>
+
+        </main>
+        <footer class="footer">
+            <p id="copyYear"></p>
+            <p>5000 Forbes Ave, Pittsburgh, PA 15213 | info@acemuseum.org</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Zack Zhang">
+    <meta name="keywords" content="Tennis, Rackets, Museum, Confirmation">
+    <meta name="description" content="ACE Museum - Order confirmation">
+    <title>ACE Museum - Order Confirmed</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+    <div class="container">
+        <header class="header">
+            <img id="logo" src="../static/acelogo.png" alt="ACE Museum Logo">
+        </header>
+        <nav class="nav_bar">
+            <a href="javascript:void(0);" class="hamburger" onclick="toggleNav()">&#9776;</a>
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="tickets.html" class="cta-nav">Buy Tickets</a>
+            <a href="membership.html">Membership</a>
+        </nav>
+        <main class="main">
+
+            <div class="confirmation-box">
+                <p style="font-size:4rem;">✓</p>
+                <h2>Order Confirmed!</h2>
+                <p>Thank you for your purchase. Your tickets to ACE Museum have been confirmed.</p>
+                <br>
+                <p><strong>Tickets:</strong> <span id="confirmQty">0</span></p>
+                <p><strong>Total:</strong> <span id="confirmTotal">$0.00</span></p>
+                <p><strong>Confirmation sent to:</strong> <span id="confirmEmail"></span></p>
+                <br>
+                <p>Please bring your confirmation email to the museum entrance. We look forward to your visit!</p>
+                <br>
+                <a href="../index.html" class="cta-button">Back to Home</a>
+            </div>
+
+        </main>
+        <footer class="footer">
+            <p id="copyYear"></p>
+            <p>5000 Forbes Ave, Pittsburgh, PA 15213 | info@acemuseum.org</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Zack Zhang">
+    <meta name="keywords" content="Tennis, Rackets, Museum, History">
+    <meta name="description" content="ACE Museum - Learn about our mission, history, and location">
+    <title>ACE Museum - Explore</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+    <div class="container">
+        <header class="header">
+            <img id="logo" src="../static/acelogo.png" alt="ACE Museum Logo">
+        </header>
+        <nav class="nav_bar">
+            <a href="javascript:void(0);" class="hamburger" onclick="toggleNav()">&#9776;</a>
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="tickets.html" class="cta-nav">Buy Tickets</a>
+            <a href="membership.html">Membership</a>
+        </nav>
+        <main class="main">
+
+            <h2>About ACE Museum</h2>
+            <img src="../static/images/museum-exterior.jpg" alt="Exterior view of the ACE Museum building" width="600">
+
+            <h2>Mission Statement</h2>
+            <p>
+                ACE Museum is dedicated to preserving and celebrating the history of tennis through
+                its most essential piece of equipment — the racket. Our mission is to educate visitors
+                about the evolution of racket design, the engineering behind modern frames, and the
+                cultural impact of tennis across the globe.
+            </p>
+
+            <h2>Who We Serve</h2>
+            <p>
+                ACE Museum welcomes tennis players of all levels, sports enthusiasts, families,
+                students, and anyone curious about how technology and design shape athletic performance.
+                Whether you are a weekend player or a lifelong fan, there is something here for you.
+            </p>
+
+            <h2>Our Story</h2>
+            <p>
+                Founded in 2020, ACE Museum began as a private collection of vintage tennis rackets
+                assembled by a lifelong tennis enthusiast in Pittsburgh. What started as a personal
+                hobby grew into a public institution when the collection expanded to over 300 rackets
+                spanning every era of the sport. Today, ACE Museum is a destination for tennis fans
+                and design lovers from around the world.
+            </p>
+
+            <h2>Milestones</h2>
+            <ul>
+                <li>2024: Opened the interactive Science of Spin exhibit</li>
+                <li>2023: Acquired rackets used in Grand Slam finals by Federer and Serena Williams</li>
+                <li>2022: Expanded to include a stringing workshop and demo area</li>
+                <li>2020: ACE Museum opens its doors with 150 rackets on display</li>
+            </ul>
+
+            <!-- FAQ Accordion -->
+            <h2>Frequently Asked Questions</h2>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    Is parking available?
+                    <span class="accordion-arrow">▼</span>
+                </div>
+                <div class="accordion-content">
+                    <p>Yes, free parking is available in the museum lot. Street parking is also available on Forbes Ave.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    Can I bring my own racket?
+                    <span class="accordion-arrow">▼</span>
+                </div>
+                <div class="accordion-content">
+                    <p>Absolutely! We encourage visitors to bring their rackets to our stringing demo area where our technicians can analyze your setup.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    Is the museum accessible?
+                    <span class="accordion-arrow">▼</span>
+                </div>
+                <div class="accordion-content">
+                    <p>Yes, ACE Museum is fully wheelchair accessible with ramps, elevators, and accessible restrooms on every floor.</p>
+                </div>
+            </div>
+
+            <!-- Video -->
+            <h2>Discover ACE Museum</h2>
+            <div class="video-container">
+                <iframe style="width:100%; height:400px;" src="https://www.youtube.com/embed/PU5h2qxmOGk?si=GnO3DWVZPZ6ogzel" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Map -->
+            <h2>Find Us</h2>
+            <div id="map"></div>
+
+        </main>
+        <footer class="footer">
+            <p id="copyYear"></p>
+            <p>5000 Forbes Ave, Pittsburgh, PA 15213 | info@acemuseum.org</p>
+        </footer>
+    </div>
+</body>
+</html>

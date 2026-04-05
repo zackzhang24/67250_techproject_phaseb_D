@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Zack Zhang">
+    <meta name="keywords" content="Tennis, Rackets, Museum, Carnegie Mellon University">
+    <meta name="description" content="ACE Museum - A museum dedicated to the history and culture of tennis rackets">
+    <title>ACE Museum</title>
+    <link rel="stylesheet" href="./static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="./static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+    <div class="container">
+        <header class="header">
+            <img id="logo" src="./static/acelogo.png" alt="ACE Museum Logo">
+        </header>
+        <nav class="nav_bar">
+            <a href="javascript:void(0);" class="hamburger" onclick="toggleNav()">&#9776;</a>
+            <a href="index.html">Home</a>
+            <a href="views/explore.html">Explore</a>
+            <a href="views/exhibitions.html">Exhibitions</a>
+            <a href="views/tickets.html" class="cta-nav">Buy Tickets</a>
+            <a href="views/membership.html">Membership</a>
+        </nav>
+        <main class="main">
+
+            <h2 id="greeting">Welcome to ACE Museum</h2>
+            <p>
+                ACE Museum is the world's first museum dedicated to the history, evolution, and culture
+                of tennis rackets. From wooden classics used in the early 1900s to the carbon fiber
+                frames of today's champions, our collection spans over a century of innovation, design,
+                and athletic achievement.
+            </p>
+            <a href="views/tickets.html" class="cta-button">Buy Tickets</a>
+
+            <!-- Short and long intro with Read More -->
+            <h2>About ACE Museum</h2>
+            <p id="shortIntro">
+                ACE Museum houses over 300 rackets from every era of tennis, including rare frames
+                used by Grand Slam champions. Our interactive exhibits let you feel the difference
+                between generations of racket technology.
+            </p>
+            <p id="longIntro" style="display:none;">
+                Founded in 2020, ACE Museum started as a private collection and grew into a
+                public institution celebrating the craft behind the sport. Beyond rackets, we explore
+                string technology, grip design, and how engineering has shaped the modern game.
+                We host monthly talks with racket designers, stringing workshops, and family-friendly
+                events. Whether you are a competitive player or just curious about the sport,
+                ACE Museum has something for you.
+            </p>
+            <span id="readMore" class="read-more-btn">Read More ▼</span>
+            <span id="readLess" class="read-less-btn" style="display:none;">Read Less ▲</span>
+
+            <!-- Visitor Info -->
+            <h2>Plan Your Visit</h2>
+            <table>
+                <tr>
+                    <th>Info</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td>Hours</td>
+                    <td>Mon – Fri: 10am – 6pm | Sat – Sun: 10am – 8pm</td>
+                </tr>
+                <tr>
+                    <td>Admission</td>
+                    <td>Adults: $18 | Students: $10 | Members: Free</td>
+                </tr>
+                <tr>
+                    <td>Location</td>
+                    <td>5000 Forbes Ave, Pittsburgh, PA 15213</td>
+                </tr>
+                <tr>
+                    <td>Contact</td>
+                    <td>info@acemuseum.org | (412) 555-0100</td>
+                </tr>
+            </table>
+
+            <!-- Image Slideshow -->
+            <h2>Gallery</h2>
+            <div class="slideshow-container">
+                <img src="./static/images/racket1.jpg" alt="Vintage wooden tennis racket from the 1920s" class="slide-active">
+                <img src="./static/images/racket2.jpg" alt="Modern carbon fiber tennis racket">
+                <img src="./static/images/racket3.jpg" alt="Collection of classic tennis rackets on display">
+                <button class="slide-btn slide-prev" onclick="prevSlide()">&#10094;</button>
+                <button class="slide-btn slide-next" onclick="nextSlide()">&#10095;</button>
+            </div>
+
+            <!-- Exhibition Preview -->
+            <h2>Current Exhibitions</h2>
+            <h3>The Wooden Era</h3>
+            <p>Explore the origins of tennis with our collection of handcrafted wooden rackets from the 1880s through the 1970s.</p>
+
+            <h3>Grand Slam Frames</h3>
+            <p>See the actual rackets used by legends like Federer, Nadal, Serena Williams, and Billie Jean King in major finals.</p>
+
+            <h3>The Science of Spin</h3>
+            <p>An interactive exhibit exploring how string patterns, tension, and frame geometry affect ball spin and power.</p>
+
+            <p><a href="views/exhibitions.html">View all exhibitions →</a></p>
+
+        </main>
+        <footer class="footer">
+            <p id="copyYear"></p>
+            <p>5000 Forbes Ave, Pittsburgh, PA 15213 | info@acemuseum.org</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Zack Zhang">
+    <meta name="keywords" content="Tennis, Rackets, Museum, Tickets">
+    <meta name="description" content="ACE Museum - Buy tickets to visit the museum">
+    <title>ACE Museum - Buy Tickets</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+    <div class="container">
+        <header class="header">
+            <img id="logo" src="../static/acelogo.png" alt="ACE Museum Logo">
+        </header>
+        <nav class="nav_bar">
+            <a href="javascript:void(0);" class="hamburger" onclick="toggleNav()">&#9776;</a>
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="tickets.html" class="cta-nav">Buy Tickets</a>
+            <a href="membership.html">Membership</a>
+        </nav>
+        <main class="main">
+
+            <h2>Buy Tickets</h2>
+            <p>Secure your visit to ACE Museum. All tickets are $18 each. Students and members receive discounted entry at the door with valid ID.</p>
+
+            <!-- Pricing Table -->
+            <table>
+                <tr>
+                    <th>Ticket Type</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>General</td>
+                    <td>General admission for ages 18 and over. Under 18 free of charge.</td>
+                    <td>$18</td>
+                </tr>
+                <tr>
+                    <td>Student</td>
+                    <td>Valid student ID required at entry</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Member</td>
+                    <td>ACE Museum members enter free</td>
+                    <td>Free</td>
+                </tr>
+            </table>
+
+            <h2>Checkout</h2>
+
+            <!-- Checkout Form -->
+            <div class="checkout-form">
+
+                <label for="visitDate">Visit Date <span style="color:red;">*</span></label>
+                <input type="date" id="visitDate" required>
+                <p class="error-msg" id="dateError"></p>
+
+                <label for="ticketType">Ticket Type <span style="color:red;">*</span></label>
+                <select id="ticketType">
+                    <option value="">-- Select --</option>
+                    <option value="general">General ($18)</option>
+                    <option value="student">Student ($10)</option>
+                    <option value="member">Member (Free)</option>
+                </select>
+                <p class="error-msg" id="typeError"></p>
+
+                <label for="ticketQuantity">Quantity (1–10) <span style="color:red;">*</span></label>
+                <input type="number" id="ticketQuantity" min="1" max="10" value="1" oninput="updatePrice()">
+                <p class="error-msg" id="qtyError"></p>
+
+                <!-- Price Display -->
+                <div class="price-display" id="priceDisplay">Total: $18.00</div>
+
+                <label for="email">Email <span style="color:red;">*</span></label>
+                <input type="email" id="email" placeholder="you@example.com">
+                <p class="error-msg" id="emailError"></p>
+
+                <label for="zipCode">Zip Code (optional)</label>
+                <input type="text" id="zipCode" placeholder="e.g. 15213" maxlength="5">
+                <p class="error-msg" id="zipError"></p>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="mailingList">
+                    <label for="mailingList" style="font-weight:400;">Join our mailing list</label>
+                </div>
+
+                <button class="cta-button" type="button" onclick="validateCheckout()">Place Order</button>
+            </div>
+
+        </main>
+        <footer class="footer">
+            <p id="copyYear"></p>
+            <p>5000 Forbes Ave, Pittsburgh, PA 15213 | info@acemuseum.org</p>
+        </footer>
+    </div>
+</body>
+</html>
